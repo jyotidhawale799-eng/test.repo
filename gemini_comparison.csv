@@ -1,0 +1,31 @@
+model,latency_seconds,input_tokens,output_tokens,total_tokens,response,error
+gemini-3.5-flash-lite,2.481,58,367,425,"Welcome, future engineers! When writing code, errors happen. In engineering, we build systems with safety margins (like circuit breakers or pressure release valves) to handle failures without crashing. In Python, **exception handling** is your software safety valve.
+
+### 1. A Simple Definition
+An **exception** is an error that stops your program while it's running (like dividing by zero). **Exception handling** is a method using `try` and `except` blocks to catch these errors, manage them gracefully, and keep your program running instead of abruptly crashing.
+
+### 2. A Practical Real-World Example
+Imagine you are writing a script for an automated weather station that calculates average wind speed: `average = total_wind / reading_count`. 
+
+If your sensor malfunctions and sends `0` for the `reading_count`, Python throws a `ZeroDivisionError` and your script dies. Here is how you engineer a fix:
+
+```python
+total_wind = 45.0
+reading_count = 0  # Sensor error!
+
+try:
+    # Code that might fail
+    average = total_wind / reading_count
+    print(f""Average wind speed: {average}"")
+
+except ZeroDivisionError:
+    # Safety valve: what to do if it fails
+    print(""Warning: Reading count is zero. Defaulting to 0.0."")
+    average = 0.0
+```
+Instead of crashing, the script logs the warning and moves on.
+
+### 3. A Short Summary
+Exception handling uses `try` to test risky code and `except` to catch failures safely. Just like a good engineer, you anticipate where things might break so your code remains robust and reliable under real-world conditions.",
+gemini-3.6-flash,,,,,,"503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+gemini-3.1-flash-lite,,,,,,"429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}"
